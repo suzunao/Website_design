@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capa_8SEC</title>
+    <link rel="stylesheet" type="text/css" href="Mini Proyecto\css\estilo1.css"> 
+</head>
+<body>
+    <div class="header-container"> 
+        <header id="inicio">
+            <div class="custom-header">
+                <img src="Mini Proyecto\img\1725745438398nj8s88x7.png" alt="Logo" class="logo">
+            
+                <h1 id="header-title">Capa_8SEC</h1>
+            
+                <div class="menu-icon" onclick="toggleMenu()">≡</div>
+                
+                <div class="nav-menu">
+                    <a href="Mini Proyecto\index.html#inicio">Inicio</a>
+                    <a href="Mini Proyecto\libros\libros.html">Libros</a>
+                    <a href="Mini Proyecto\video\videos.html">videos</a>
+                    <a href="Mini Proyecto\index.html#nosotros">Sobre nosotros</a>
+                    <a href="Mini Proyecto\index.html#autores">Autores</a>
+                    <a href="Mini Proyecto\index.html#contacto">Contacto</a>
+                </div>
+            </div>
+        </header>
+    </div>
+    <Section class="grid-container"></Section>
+        <center>
+            <h3>Articulos</h3>
+        </center>
+    </Section>
+    <section class="grid-container">
+        <a href="Mini Proyecto\Contendio\conte.html" class="grid-item">
+            <h2>¿Qué es la ciberseguridad?</h2>
+            <img src="https://www.hacknoid.com/wp-content/uploads/2022/07/esquema-ciberseguridad.png" alt="Contenido 1">
+            <P>La ciberseguridad es el conjunto de prácticas, tecnologías y políticas diseñadas para proteger los sistemas, redes y datos de los ataques cibernéticos. En un mundo cada vez más digital, la ciberseguridad se ha vuelto esencial para garantizar la privacidad y la integridad de la información.</P>
+            <samp>by.Yohannys Vega</samp>
+        </a>
+
+        <a href="Documents\Otros\Codigos de Desarrollo web\Mini Proyecto\Contendio\conte1.html" class="grid-item">
+            <h2>Amenazas comunes</h2>
+            <img src="https://www.aicad.es/asset/img/3/ciberseguridad-1_0268435722.png" alt="Contenido 1">
+            <p>Las amenazas cibernéticas se han vuelto cada vez más sofisticadas, poniendo en riesgo la seguridad de la información y los activos de las organizaciones. A continuación, exploramos algunas de las amenazas más comunes que enfrentan las empresas hoy en día.</p>
+            <samp>by Josué Martinez</samp>
+        </a>
+
+        <a href="Documents\Otros\Codigos de Desarrollo web\Mini Proyecto\Contendio\conte2.html" class="grid-item">
+            <h2>Prevención de Amenazas</h2>
+            <img src="https://kitdigital.online/assets/images/infografia.png" alt="Contenido 1">
+            <p>La prevención de ciberataques es crucial para proteger la información y los activos de una organización.</p>
+            <samp>by.Wuilliam Rosales</samp>
+        </a>
+    </section>
+    <div class="footer">
+        <footer>&copy; derechos reservados a Capa_8sec</footer>
+    </div>
+    <script>
+        let isTransformed = false; 
+        function transformText() {
+        const headerTitle = document.getElementById("header-title");
+        const text = headerTitle.innerText;
+
+        if (!isTransformed) {
+            const transformedText = text
+            .replace(/a/g, '4')
+            .replace(/_/g, '-')
+            .replace(/S/g, '$')
+            .replace(/e/g, '3');
+            headerTitle.innerText = transformedText;
+        } else {
+            const originalText = text
+            .replace(/4/g, 'a')
+            .replace(/-/g, '_')
+            .replace(/\$/g, 'S')
+            .replace(/3/g, 'e');
+            headerTitle.innerText = originalText;
+        }
+        isTransformed = !isTransformed;
+        }
+        setInterval(transformText, 3000);
+        
+        function toggleMenu() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navMenu = document.querySelector('.nav-menu');
+            menuIcon.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

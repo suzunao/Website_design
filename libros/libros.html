@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capa_8SEC</title>
+    <link rel="stylesheet" type="text/css" href="Mini Proyecto\css\estilo1.css"> 
+</head>
+<body>
+    <div class="header-container"> 
+        <header id="inicio">
+            <div class="custom-header">
+                <img src="Mini Proyecto\img\1725745438398nj8s88x7.png" alt="Logo" class="logo">
+            
+                <h1>Capa_8SEC</h1>
+            
+                <div class="menu-icon" onclick="toggleMenu()">≡</div>
+                
+                <div class="nav-menu">
+                    <a href="Mini Proyecto\index.html#inicio">Inicio</a>
+                    <a href="Mini Proyecto\Contendio\Articulos.html">Articulos</a>
+                    <a href="Mini Proyecto\video\videos.html">videos</a>
+                    <a href="Mini Proyecto\index.html#nosotros">Sobre nosotros</a>
+                    <a href="Mini Proyecto\index.html#autores">Autores</a>
+                    <a href="Mini Proyecto\index.html#contacto">Contacto</a>
+                </div>
+            </div>
+        </header>
+    </div>
+    <Section class="grid-container"></Section>
+        <center>
+            <h3>Libros</h3>
+        </center>
+    </Section>
+    <section class="grid-container">
+        <a href="https://www.casadellibro.com/libro-el-arte-de-la-invisibilidad-el-hacker-mas-famoso-del-mundo-ensen-a-seguridad-en-la-era-big-brother-y-big-data/9788441540613/7363814" class="grid-item">
+            <h2>EL ARTE DE LA INVISIBILIDAD: EL HACKER MAS FAMOSO DEL MUNDO ENSEÑ A SEGURIDAD EN LA ERA BIG BROTHER Y BIG DATA</h2>
+            <img src="https://imagessl3.casadellibro.com/a/l/s7/13/9788441540613.webp" alt="Contenido 1">
+            <p>by. Anaya Multimedia</p>
+        </a>
+    </section>
+    <div class="footer">
+        <footer>&copy; derechos reservados a Capa_8sec</footer>
+    </div>
+    <script>
+        let isTransformed = false; 
+        function transformText() {
+        const headerTitle = document.getElementById("header-title");
+        const text = headerTitle.innerText;
+
+        if (!isTransformed) {
+            const transformedText = text
+            .replace(/a/g, '4')
+            .replace(/_/g, '-')
+            .replace(/S/g, '$')
+            .replace(/e/g, '3');
+            headerTitle.innerText = transformedText;
+        } else {
+            const originalText = text
+            .replace(/4/g, 'a')
+            .replace(/-/g, '_')
+            .replace(/\$/g, 'S')
+            .replace(/3/g, 'e');
+            headerTitle.innerText = originalText;
+        }
+        isTransformed = !isTransformed;
+        }
+        setInterval(transformText, 3000);
+        
+        function toggleMenu() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navMenu = document.querySelector('.nav-menu');
+            menuIcon.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

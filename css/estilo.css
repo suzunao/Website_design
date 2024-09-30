@@ -1,0 +1,477 @@
+/* Cabezera*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:  1.6;
+    background-color: #ffffff;  
+}
+
+/* heder */
+
+.custom-header{
+    position: sticky;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    padding: 10px 20px; 
+    background-image: url(https://i.pinimg.com/originals/13/e7/db/13e7db0691f52e61b674aef1ae44d519.gif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 20px;  
+}
+
+/* Logo */
+.custom-header .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+/* Título del sitio centrado */
+.custom-header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Menú desplegable */
+.custom-header .menu-icon {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+.custom-header .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px; 
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.custom-header .nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.custom-header .nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mostrar menú cuando se activa */
+.custom-header .menu-icon.active + .nav-menu {
+    display: block;
+}
+
+
+/* Descripcion*/
+.description-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.description-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px auto;
+    color: #333;
+}
+
+.description-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px auto ;
+    line-height: 1.6;
+}
+
+
+/* Sección de contenido */
+.content-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.content-block {
+    background-color: #fff;
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.333% - 20px); 
+    text-align: center;
+    overflow: hidden;
+}
+
+.content-block img.content-image {
+    width: 60%;
+    height:auto; 
+    border-radius: 10px;
+    margin-bottom: 15px; 
+    
+}
+
+.content-block h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content-block p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 1rem;
+    color: #FF6347; 
+    text-decoration: none;
+    border: 1px solid #FF6347;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #FF6347;
+    color: #fff;
+}
+
+.view-more-container {
+    text-align: center;
+    margin-top: 30px; 
+}
+
+.view-more-btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #FF6347; 
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.view-more-btn:hover {
+    background-color: #FF6347; 
+    color: #fff;
+}
+
+/* Estilos para la sección "Nosotros" */
+#nosotros {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.topics-section {
+    padding: 40px 20px;
+    text-align: center;
+    overflow: hidden; 
+}
+
+.topics-carousel {
+    position: relative;
+    overflow: hidden; 
+    width: 100%; 
+    max-width: 100%; 
+    margin: 0 auto; 
+}
+
+.topics-list {
+    display: flex;
+    transition: transform 1s ease-in-out; 
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    flex-wrap: nowrap; 
+}
+
+.topics-list li {
+    flex: 0 0 auto; 
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 0 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    min-width: 50px; 
+    box-sizing: border-box; 
+}
+
+/* Estilos para la sección de autores */
+#autores {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.authors-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.author {
+    text-align: center;
+    flex: 1 1 300px; 
+}
+
+.author-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.author h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.author p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre íconos */
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; 
+}
+
+.social-icon {
+    display: flex;
+    align-items: center; /* Alinea el texto con el ícono */
+    text-decoration: none; /* Quita subrayado del enlace */
+    color: inherit; /* Hereda el color del texto */
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon img:hover {
+    opacity: 0.7;
+}
+
+.username {
+    margin-left: 8px; /* Espacio entre el ícono y el texto */
+    font-family: sans-serif; /* Tipografía corrida */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.social-media {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.social-media h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social-media-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media-list li {
+    margin: 0 0 10px 0; /* Margen solo en la parte inferior */
+}
+
+.social-media-list a {
+    text-decoration: none;
+    color: #171718; 
+    font-size: 1.0rem;
+    transition: color 0.3s;
+}
+
+.social-media-list a:hover {
+    color: #161718; 
+}
+
+.subscription-card {
+    flex: 1;
+    max-width: 400px;
+    background-color: #f1f1f1; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.subscription-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscription-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.subscription-form button {
+    padding: 10px;
+    background-color: #FF6347; 
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.subscription-form button:hover {
+    background-color: #FF6347; 
+    ;
+}
+
+.footer {
+    background-color: #ffffff; 
+    padding: 10px; 
+    width: 100%; 
+    text-align: center; 
+    color: #2c2b2b; 
+}
+
+.footer {
+    margin: 50; 
+}
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .custom-header h1 {
+        font-size: 1.5rem;
+    }
+    .description-section {
+        padding: 20px;
+    }
+    .content-block {
+        width: calc(50% - 20px); 
+    }
+    .authors-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-container {
+        padding: 20px;
+    }
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-media {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .subscription-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-header h1 {
+        font-size: 1.2rem;
+    }
+    .description-section h2 {
+        font-size: 1.5rem;
+    }
+    .description-section p {
+        font-size: 0.9rem;
+    }
+    .content-block {
+        width: 100%; 
+    }
+}

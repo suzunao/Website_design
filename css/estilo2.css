@@ -1,0 +1,227 @@
+/* Cabezera*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9; 
+}
+  
+/* heder */
+  
+.custom-header{
+    position: sticky;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    padding: 10px 20px; 
+    background-image: url(https://i.pinimg.com/originals/13/e7/db/13e7db0691f52e61b674aef1ae44d519.gif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 20px;  
+}
+  
+/* Logo */
+.custom-header .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+  
+/* Título del sitio centrado */
+.custom-header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+/* Menú desplegable */
+.custom-header .menu-icon {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+  
+.custom-header .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px; 
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+}
+  
+.custom-header .nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.custom-header .nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mostrar menú cuando se activa */
+.custom-header .menu-icon.active + .nav-menu {
+    display: block;
+}
+
+/* Estilo del artículo en el centro */
+#contenido-articulo {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Encabezado del artículo */
+.article-header h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.author-info {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Estilo del cuerpo del artículo */
+.article-body h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    color: #333;
+}
+
+.article-body p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.article-body ul, 
+.article-body ol {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+/* Imágenes centradas */
+.article-body img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo de enlaces */
+.article-body a {
+    color: #1a73e8;
+    text-decoration: none;
+    border-bottom: 1px solid #1a73e8;
+}
+
+.article-body a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo del logotipo y el título */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+.custom-header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo {
+    height: 40px;
+}
+/* Estilos para la información del autor */
+.author-info {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Georgia', serif; /* Fuente serif clásica */
+}
+
+/* Estilo de la imagen del logo del autor */
+.author-logo {
+    width: 40px; /* Ajusta el tamaño de la imagen del logo */
+    height: 40px;
+    border-radius: 50%; /* Hace que el logo sea circular */
+    margin-right: 10px; /* Espacio entre el logo y el nombre */
+}
+
+/* Estilo del nombre del autor */
+.author-username {
+    font-style: italic; /* Cursiva para el nombre de usuario */
+    margin-left: 5px;
+}
+
+/* Estilo para la duración de lectura y fecha */
+.read-time {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+.footer {
+    background-color: #ffffff; 
+    padding: 10px; 
+    width: 100%; 
+    text-align: center; 
+    color: #2c2b2b; 
+}
+
+.footer {
+    margin: 50; 
+}
+
+/* Estilo para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #contenido-articulo {
+        margin: 20px auto;
+    }
+
+    .article-header h1 {
+        font-size: 28px;
+    }
+
+    .article-body p {
+        font-size: 16px;
+    }
+}
